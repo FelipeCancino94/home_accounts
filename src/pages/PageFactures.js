@@ -6,13 +6,16 @@ const PageFactures = () => {
         {/* Datos recibo */}
         <div className="mt-3">
           <p className="fs-4">Servicio publico</p>
-          <select className="form-select py-2 fs-4" aria-label="Default select example" id="selectorRecibo">
-            <option selected>Seleccione el servicio publico</option>
+          <select
+            className="form-select py-2 fs-4"
+            aria-label="Default select example" id="selectorRecibo"
+            defaultValue={'luz'}>
+            <option>Seleccione el servicio publico</option>
             <option value="luz">Luz</option>
             <option value="gas">Gas</option>
             <option value="agua">Agua</option>
           </select>
-          <label className="fs-4 my-3" for="valorRecibo">Ingrese el valor</label>
+          <label className="fs-4 my-3">Ingrese el valor</label>
           <div className="input-group">
             <input type="text" id="valorRecibo" className="form-control" aria-label="Monto pesos (con tres decimales despues del punto" />
             <span className="input-group-text">$</span>
@@ -29,8 +32,9 @@ const PageFactures = () => {
             <div id="collapseVisitante" className="accordion-collapse collapse" aria-labelledby="tituloAcordeon" data-bs-parent="#accordionVisitante">
               <div className="accordion-body ">
                 <p className="fs-5">Apartamento del visitante</p>
-                <select className="form-select py-1 fs-5" aria-label="Default select Visitante" id="aptoVisitante">
-                    <option selected>Seleccione numero de apto</option>
+                <select className="form-select py-1 fs-5" aria-label="Default select Visitante" id="aptoVisitante"
+                  defaultValue={'101'}>
+                    <option>Seleccione numero de apto</option>
                     <option value="301">301 (Propietarios)</option>
                     <option value="302">302</option>
                     <option value="201">201</option>
@@ -51,7 +55,7 @@ const PageFactures = () => {
           </div>
         </div>
         {/* Boton de calculo */}
-        <button type="button" className="btn btn-info text-white" onclick="">Calcular</button>
+        { /*<button type="button" className="btn btn-info text-white" onclick="">Calcular</button> }
         {/* Resultado valor del recibo */}
         <div id="contenidoResultado"></div>
       </div>
